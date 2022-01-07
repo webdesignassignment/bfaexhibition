@@ -1,1 +1,1 @@
-# bfaexhibition website by Francesca vella, Giuliab Cicero Santalena and Abigail Cassar
+# bfaexhibition website by Francesca vella, Giulia Cicero Santalena and Abigail Cassar
