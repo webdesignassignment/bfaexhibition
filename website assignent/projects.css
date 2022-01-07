@@ -1,0 +1,64 @@
+
+/* CSS inspo from https://www.w3schools.com/howto/howto_js_image_grid.asp  */
+*{
+	margin: 0px ;
+	padding: 0;
+	font-family: 'Lato', sans-serif;
+	font-family: 'Oswald', sans-serif;
+	background-color:#201028;
+}
+	.gallery {
+	display: flex;
+	padding-top: 50px;
+	transition: .3s;
+}
+
+
+.gallery__thumb:hover {
+	filter: grayscale(1);
+	}
+	
+.gallery__column {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	}
+	
+.gallery__link {
+	margin: 1px;
+	overflow: hidden;
+    }			
+    .gallery__caption {
+	  color: rgb(252, 249, 252);
+	  opacity: 30%;
+	  margin-left: 10px;
+	  position: relative;
+			}
+}
+	
+	.gallery__thumb {
+		position:absolute;
+	}
+
+	.gallery__image {
+		margin: 7px;
+		margin-top: 10px;
+		display:block;
+		width: 100%;
+		opacity: 1;
+		backface-visibility: hidden;
+		transition: .3s;
+    }
+		.gallery__image:hover {
+			transform: scale(1.1);
+		}
+	}
+	
+	.gallery__caption {
+		position: relative;
+		opacity: 20%;
+	}
+    
+    
+      
+

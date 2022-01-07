@@ -1,0 +1,160 @@
+*{
+  margin: 0 ;
+  padding: 0;
+  box-sizing:border-box; 
+  font-family: 'Lato', sans-serif;
+  font-family: 'Oswald', sans-serif;
+  background-color: #201028;
+  
+}
+ /* we create a photo in indesign and imported as homepage*/
+.homepagephoto {
+  width: 100vmax;
+  height: 100vh;
+} 
+
+ /* we created the logo in png format */
+.logo {
+  top: -78px;
+  left: -40px;
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+  background: transparent;
+}
+
+ /* background around the home,artist etc (trans used for when they are gong to appear in the screen)*/
+.nav-wrapper{
+  position: fixed;
+  top: 0;
+  opacity: 85%;
+  right: -100%;
+  height: 100%;
+  width: 50%;
+  background:#876684;
+  transition: all 0.6s ease-in-out;
+}
+/* menu bar appearing once clicking on the lines menu*/
+#active:checked ~ .nav-wrapper{
+  right:0;
+}
+/* the 3 lines of the menu bar including an inamtion which translate the bars to a x */
+
+.menu-btn{
+  position: absolute;
+  z-index: 2;
+  right: 20px;
+  top: 30px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  color: #876684;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor:pointer;
+  transition: all 0.3s ease-in-out;
+}
+.menu-btn span,
+.menu-btn:before,
+.menu-btn:after{
+	content: "";
+	position: absolute;
+	top: calc(50% - 1px);
+	left: 30%;
+	width: 40%;
+	border-bottom: 2px solid #876684;
+	transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.menu-btn:before{
+  transform: translateY(-8px);
+}
+.menu-btn:after{
+  transform: translateY(8px);
+}
+
+/* adjusting animation and transl*/
+
+.close {
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	transition: background .6s;
+}
+
+#active:checked + .menu-btn span {
+	transform: scaleX(0);
+}
+#active:checked + .menu-btn:before {
+	transform: rotate(45deg);
+  border-color: #fff;
+}
+#active:checked + .menu-btn:after {
+	transform: rotate(-45deg);
+  border-color: #fff;
+}
+
+.nav-wrapper ul{
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  height: 90%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+}
+.nav-wrapper ul li{
+  height: 10%;
+  margin: 15px 0;
+}
+.nav-wrapper ul li a{
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 500;
+  padding: 5px 30px;
+  color: #fff;
+  border-radius: 500px;
+  position: absolute;
+  line-height: 50px;
+  margin: 5px 30px;
+  opacity: 0;
+  transition: all 0.3s ease;
+  
+}
+.nav-wrapper ul li a:after{
+  position: absolute;
+  content: "";
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 50px;
+  transform: scaleY(0);
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+
+.nav-wrapper ul li a:hover{
+  color: #daf0de;
+}
+input[type="checkbox"]{
+  display: none;
+}
+
+#active:checked ~ .nav-wrapper ul li a{
+  opacity: 1;
+}
+.nav-wrapper ul li a{
+  transition: opacity 1.2s, transform 1.2s 
+  
+}
+#active:checked ~ .nav-wrapper ul li a{
+	transform: none;
+	transition-timing-function: ease;
+   transition-delay: .6s;
+  transform: translateX(-100px);
+}
+
+
