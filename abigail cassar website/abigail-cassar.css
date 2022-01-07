@@ -1,0 +1,119 @@
+/* dotted lines */
+hr.new1 { 
+  border: 1px dashed white; 
+  width: 100%; 
+  margin: auto; 
+  margin-top: 0%; 
+  margin-bottom: -1%; 
+ }
+
+
+
+/*  about us */
+/* code from:  https://codepen.io/ClaireLarsen/pen/XmVyVX */
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+html, body{
+ height: 100%;
+ font-weight: 90;
+}
+
+body{
+ background:	#201128;
+ font-family: Arial;
+}
+
+svg {
+ font: 10.5em 'Montserrat';
+ width: 860px;
+ height: 200px;
+ margin: auto;
+}
+
+.text-copy {
+ fill: none;
+ stroke: white;
+ stroke-dasharray: 6% 29%;
+ stroke-width: 5px;
+ stroke-dashoffset: 0%;
+ animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+ stroke: #876683;
+ animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+ stroke: #ffbe00;
+ animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+ stroke: #ffecb7;
+ animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+ stroke: #d8efdf;
+ animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+ stroke: #a8c6ae;
+ animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+ 100% {stroke-dashoffset: -35%;}
+}
+
+/* font */
+p {
+ font-family: 'Basic', sans-serif;
+ font-size: 20px ;
+ margin:50px;
+ margin-bottom: 30px;
+ margin-top: -20px;
+ text-align: justify;
+}
+
+/* image */
+/* transperent background from: https://www.w3schools.com/howto/howto_css_image_overlay_title.asp */
+* {box-sizing: border-box;}
+
+.container {
+ position: relative;
+ width: 50%;
+ max-width: 390px;
+}
+
+.image {
+ opacity: 0.6;
+ margin: -540px;
+ margin-top: 20px;
+ display: block;
+ width: 400%;
+ height: auto;
+}
+
+.overlay {
+ font-family: 'Basic', sans-serif;
+ margin-left: -538px;
+ position: absolute; 
+ bottom: 0; 
+ background: rgb(0, 0, 0);
+ background: rgba(0, 0, 0, 0.5); /* Black see-through */
+ color: #f1f1f1; 
+ width: 376%;
+ transition: .5s ease;
+ opacity:0;
+ color: white;
+ font-size: 20px;
+ padding: 20px;
+ text-align: center;
+}
+
+.container:hover .overlay {
+ opacity: 1;
+}
